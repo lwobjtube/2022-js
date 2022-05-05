@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    console.log(10 == '10');
+    console.log(10 === '10');
+    console.log('20' != 20);
+    console.log('20' !== 20);
+    //!=不等于比较，值是不是一样，当值不一样的时候结果为true
+    //!==不全等（恒等于）要么类型不相等 要么值不相等 只要有一个条件满足就为true
+
+    //>=只要有一个条件满足就为true
+    //<= 只要有一个条件满足就为true
+    console.log(123 >= 1010);
+
+    //特殊
+    //null ==0 false    false 
+    //null == ""         false 
+    //null=="  "           false 
+    // null=false         false 
+    // nul==undefined     true  (派生)
+
+    //特殊
+    // console.log(!null);   true
+    // console.log(!undefined);  true
+    // console.log(!"");  true
+    // console.log("   ");  false
+
+    console.log((!false - !null) * parseInt('3') + "");
+    //true-true
+    //0*3=0
+    //0+""='0'
+</script>
+
+</html>

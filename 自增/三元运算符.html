@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    let a = 1;
+    let b = 2;
+
+    console.log(a > b ? '是' : '否');
+
+
+    console.log(a < b ? a++ : b++); // 打印 （a++）var b=a++  1
+
+    // console.log(b);
+    // console.log(a);
+    // console.log(a);
+
+    //isNaN是不是 不是一个数字
+    // let s = prompt('请输入内容')
+    // console.log(typeof s);
+    // s == '' ? alert('必须内容') : isNaN(s) ? alert('请输入一个数字') : alert('完美')
+
+    //判断手机号
+    // let tel = prompt('请输入手机号！', 0)
+
+    // tel == null ? alert('点错了这是取消按钮') : tel.length == 0 ? alert('长度不能为0请输入手机号') :
+    //     isNaN(tel) ? alert('请输入数字') :
+    //     tel != parseInt(tel) ? alert('输入请为整数') :
+    //     tel.charAt(0) == '0' ? alert('第一位不能为0') :
+    //     tel.length != 11 ? alert('长度小于11') : alert('通过验证！！')
+
+    // console.log('2' < '3');
+
+    //小写》大于字母》数字  ask码!!!!!!
+    //var aa = '6qwe'
+    // console.log(aa.charCodeAt(1)); //1代表索引查找
+
+    //console.log('2' < '25'); //按位比较 2<1 false
+    //console.log('2' > '12'); //按位比较 2>1 true
+
+    S
+    //求任意实参中所有的值
+    console.log('==========');
+
+    function f1() {
+        let sum = 0
+        for (let i = 0; i < arguments.length; i++) {
+            //sum += arguments[i]
+
+            sum = sum + arguments[i]
+        }
+        return function() {
+            return sum
+        }
+    }
+    //闭包 闭包是指有权访问另一个函数作用域中的变量的函数
+    let res = f1(1, 2, 3)
+    console.log(res());
+
+    function add() {
+
+        let counter = 0;
+        return function() {
+            return counter += 1
+        }
+    }
+
+    let adds = add()
+    console.log(adds());
+    console.log(adds());
+    console.log(adds());
+</script>
+
+</html>

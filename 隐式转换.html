@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    //隐式转换会出现在四则运算
+
+    let a = ''
+    let b = null
+    let c = 'qwe'
+    let d = true
+    let dd = 12
+    let e = '12avdd'
+
+    console.log(a + b);
+    console.log(b + true);
+
+    //总结 加法时候，碰到布尔值 true 会转换1 false 
+    //加法 碰到null null会转换0 字符串就拼接
+
+    //undefined+number =>NAN
+    //undefined+String =>NAN
+    //undefined+String =>String
+    //bolean+number=number
+    //null+number=number
+
+
+    //减法(减不了就是NAN)
+    console.log(a - b);
+    console.log(a - d);
+    console.log(dd - parseInt(e));
+    console.log(c - d); //'que'-1 =>Number('qwe')-Number(ture)=NAN-1=NaN
+</script>
+
+</html>

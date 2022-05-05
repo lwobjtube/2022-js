@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // let a = (parseInt(prompt('请输入第一个数')));
+    // let b = (parseInt(prompt('请输入第二个数')));
+
+    // alert(a + b);
+
+    //Number 强制转换
+    //如果遇到空字符或空格字符串则会转换0
+    //遇到非数 NaN
+
+    console.log(null / 1);
+    //布尔值针对number=> true/1  fasle/0
+    console.log(Number(true));
+    console.log(Number(false));
+
+    //当布尔值和其他类型运算 布尔值会转换 但是不影响本身
+
+    let a = 1
+    let b = true
+    console.log(a + b);
+
+    var body
+    console.log(Number(undefined));
+    console.log(Number(body));
+    console.log('=======');
+    console.log(Number(null)); //0
+    console.log(null + '111'); //string(null)=>'null'+'111'=>null111
+    console.log(null + 222);
+    console.log(456 / null);
+    //Number(null) => 456 / 0 => Infinity
+</script>
+
+</html>

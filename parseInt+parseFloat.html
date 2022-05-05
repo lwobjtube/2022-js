@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //parseInt用法(只能转换数字)
+    //针对字符串类型转换成number
+
+    console.log(parseInt(1.2));
+    console.log(parseInt('av'));
+    console.log(parseInt('1av'));
+    console.log(parseInt('av1'));
+
+    //先解析位置0的字符，如果不是有效字符 直接返回NaN
+
+    // parseFloat用法
+    console.log('==================');
+    console.log(parseFloat(1.2));
+    console.log(parseFloat('av'));
+    console.log(parseFloat('1av'));
+    console.log(parseFloat('1.222av1'));
+
+    console.log(String('12.20') + Boolean(true)); //12.20true
+    var c
+    console.log(Number(true) + parseInt(4.65) + c); //1+4+undefined =5+undefined=NAN
+</script>
+
+</html>

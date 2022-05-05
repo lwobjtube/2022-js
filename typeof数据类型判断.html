@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    console.log(typeof('1'));
+    console.log(typeof(1));
+    console.log(typeof(true));
+    console.log(typeof(null));
+
+    function a() {}
+
+    console.log(typeof a); //function类型
+    //typeof 可以检测基本类型string number boolean undefined 和引用数据类型function()
+    //不能检测引用数据类型 array object 但是null是空对象所以会和引用对象归为一类
+    //不能检测复杂数据类型( null [] {})=>都是归为对象
+
+    console.log(Symbol[1] == Symbol[1]);
+    console.log(typeof Symbol);
+</script>
+
+</html>

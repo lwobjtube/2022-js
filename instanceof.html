@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    // new Array = [1, 2, 3]
+    //检测复杂数据类型
+
+
+    console.log([] instanceof Array);
+    console.log({}
+        instanceof Object);
+
+    function a() {
+
+
+    }
+    console.log(a instanceof Function);
+
+
+    console.log(Function instanceof Object);
+
+    //instanceof内部机制通过判断对象的原型链中是不是能找到类型的prototype
+    //使用instanceof判断一个对象是否为数组，instanceof会判断这个对象的原型链上是否会找到对应的Array的原型，找到返回ture 否则返回false
+    //但是instanceof 只能判断对象类型，原始类型不可以 并且所有对象类型instanceof Object都是true
+
+    //isArray()
+    //当检测array实例Array.isArray优于instanceof 因为Array.isArray可以检测iframes
+    //当不存在Array.isArray()可以用Object.prototype.toString().call()
+
+    // Array.prototype.toString().call()
+    //所有基本类型都可以判断 即使是null undefiend
+
+    let aa = [1, , 2, 3]
+    console.log(Object.prototype.toString.call(undefined));
+
+    console.log(Array.prototype.toString.call(aa));
+    console.log(aa.toString());
+    //toString是Object.prototype.toString()重写后的方法，并不是Object.prototype中的toString()
+</script>
+
+</html>
