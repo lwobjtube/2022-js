@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let age = prompt('请输入年龄', 0)
+        // age == null ? alert('点错了这是取消按钮') : age.length == 0 ? alert('请输入年龄') : isNaN(age) ? alert('不是数字') : age > 0 < 110 ? alert('年龄合格！！') : alert('yanz')
+
+
+    if (age != null) {
+        //点击的一定是一个确定按钮
+        if (age == "") {
+            //空的不能执行
+            alert('请输入年龄')
+        } else {
+            //不是一个数字true 是数字false
+            if (isNaN(age)) {
+                alert('不是数字')
+            } else {
+                //年龄 不是整数（false）
+                if (age != parseInt(age)) {
+                    alert('请整数！！！')
+                } else {
+                    //0-100
+                    if (!(age >= 0 && age <= 100)) {
+                        alert('请输入年龄0-100')
+                    } else {
+                        if (age >= 18) {
+                            alert(' 成年了')
+                        } else {
+                            alert('小屁孩')
+                        }
+                    }
+                }
+            }
+        }
+    } else {
+        alert('点错了')
+    }
+</script>
+
+</html>
