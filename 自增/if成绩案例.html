@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    let scone = prompt('请输入成绩')
+    if (scone == null) {
+        alert('点错了')
+    } else {
+        if (scone > 100) {
+            alert('无效成绩')
+        } else {
+            if (scone.length == 0) {
+                alert('空不行')
+            } else {
+                if (isNaN(scone)) {
+                    alert('不是数字')
+                } else {
+                    if (scone != parseFloat(scone)) {
+                        alert('小时')
+                    } else {
+                        if (scone < 60) {
+                            alert('不及格')
+                        } else {
+                            if (scone >= 60 && scone <= 69) {
+                                alert('加把劲')
+                            } else {
+                                if (scone >= 70 && scone <= 79) {
+                                    alert('铂金')
+                                } else {
+                                    if (scone >= 80 && scone <= 89) {
+                                        alert('星耀')
+                                    } else {
+                                        if (scone >= 90 && scone <= 100) {
+                                            alert('王者牛逼！！！')
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+</script>
+
+</html>

@@ -17,6 +17,22 @@
     console.log(3 > 5 != 3 < 6);
 
 
+    // if (aa) {
+    //     console.log('简写a');
+    // }
+    var a = 1;
+    var b = 2;
+    var c = true;
+    var d = '45';
+    if (a < b || c > d) {
+        console.log(c++); //true++ （后置是1
+        console.log(c);
+        //当如果是布尔值做++/--运算 也会发生隐式类型转换
+    }
+    //
+
+    console.log(1 + '2');
+    console.log(Number('2') + 1);
 
     // != 非真即假 非假即真
 

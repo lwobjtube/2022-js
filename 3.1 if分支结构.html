@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尚硅谷-前端-JS基础-JS分支结构-if分支</title>
+    <link rel="Shortcut Icon" href="../image/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <script>
+        var a = 1;
+        var b = 2;
+        var c = true;
+        var d = '45';
+
+        /* if(a<b){
+            //1. console.log(a); 2. a++
+            // console.log(a++); //后置 无论++还是-- 都是原本的值  a = a + 1
+            // console.log(a); // 2
+
+            console.log(++a);  //前置  
+        } */
+
+        if(true){
+            console.log('要过年了~~~,开不开心~~~');
+        }
+
+        if(1){
+            console.log('这也是为true的条件写法');
+        }
+
+        if(c == true){
+            console.log('这还可以和布尔值之间做比较，也为true');
+        }
+
+        //可以简写成
+        if(c){
+            console.log('c也是可以被看见的');
+        }
+
+        function fun(){}
+
+        if(fun){
+            console.log('在判断的条件上写一个函数，也是为true');
+        }
+
+        //多个条件进行判断
+        // a = 1  b = 2  c = true  d ='45'
+
+        // 1 < 2 && '45' > true
+        /* if(a < b  && d > c){
+            console.log('if条件中也可以存在多个值的比较');
+        } */
+
+        //  1 < 2 || true > '45'
+        /* if( a < b || c > d){
+            // console.log('if条件中也可以存在多个值的比较');
+            console.log(c++); // 当如果是布尔值做++/--运算的时候，也会发生隐式类型转换
+        } */
+        c = false;
+        if(!c){
+            console.log(++d); 
+        }
+
+        //在if判断分支中只会出现比较运算符、逻辑运算符
+
+        if(4<=6){
+            console.log('输出');
+        }
+
+        //只要是数字的不为0的，都算是绝对的真值
+        if(20){
+            console.log(20);
+        }
+
+        //为false的情况:
+        //false、null、undefined、0
+
+        if(false){
+            console.log('你看不见我~~~');
+        }
+
+        if(undefined){
+            console.log('你还是看不见我~~~');
+        }
+        
+        if(0){
+            console.log('你仍然看不见我~~~');
+        }
+
+        if(null){
+            console.log('你这辈子都甭想看见我~~~');
+        }
+
+
+        //当if条件的语句只有一句的时候，可以省略{}
+
+        if(1<2) console.log(1);
+
+        var a;
+        var A;
+
+        
+
+
+
+    </script>
+</body>
+</html>
