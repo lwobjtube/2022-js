@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    // var sum = 0
+    // for (var i = 2; i <= 10; i += 2) {
+    //     console.log(i, '里');
+    //     sum += i
+
+    // }
+    // console.log(sum);
+
+    // var a = 1
+
+    // if (typeof(a == 'number')) {
+    //     console.log('ok');
+    // }
+
+
+    let str = ''
+    for (var i = 1; i <= 9; i++) {
+
+        for (var j = 1; j <= i; j++) {
+
+            str = str + (j + '*' + i + '=' + i * j + "&nbsp" + "&nbsp")
+
+        }
+        // document.write("<br/>")
+
+        console.log(str);
+    }
+
+    //遍历对象
+
+
+    let person = {
+        name: 1,
+        age: 24,
+        sex: 1,
+        seep() {
+            console.log('red');
+        }
+    }
+
+    for (let obj in person) {
+        // console.log(person[obj]);
+        console.log(obj);
+
+    }
+
+    person.seep()
+</script>
+
+</html>
