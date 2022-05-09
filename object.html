@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // let person = {
+    //     name: '老吴',
+    //     age: 24,
+    //     hobby: ['上网', '打游戏'],
+    //     sleep() {
+    //         console.log('我会写前端!!!!!  ');
+    //     }
+    // }
+
+    // // person.sleep()
+
+    // for (let attr in person) {
+    //     if (attr == 'sleep') {
+    //         // person[attr]()
+    //         person.sleep()
+    //     } else if (attr == 'age') {
+    //         // console.log(person.age);
+    //         console.log(person[attr]);
+    //     }
+
+    // }
+
+    // for (let i = 1; i < 10; i++) {
+    //     if (i > 3) {
+    //         break;
+    //     }
+
+    //     console.log(i);
+    // }
+
+    // console.log('========');
+
+    // for (var i = 0; i < 10; i++) {
+    //     for (var j = 0; j < 10; j++) {
+    //         if (i = 5 && j == 5) {
+    //             break;
+    //         }
+    //     }
+    // }
+
+    // console.log(i, j);
+    // var num = 0;
+    // for (var i = 0; i < 4; i++) {
+    //     for (var j = 0; j < 4; j++) {
+    //         if (i == 3 && j == 3) {
+    //             break;
+    //         }
+    //         num++;
+    //     }
+    // }
+    // alert(num); //95
+
+    // let arr = [1, 2, 3, 4, 5]
+
+    // for (var i = 1; i < arr.length; i++) {
+    //     if (i > 3) {
+    //         break;
+    //     }
+
+    //     console.log(i);
+    // }
+
+    // var num = 0;
+    // // cc:
+
+    // var num = 0
+
+    // break 可以在后面加label (直接终止外层)
+    // label:
+    // leb:
+    //     for (let i = 0; i < 10; i++) {
+    //         console.log(i, '========外层for循环');
+    //         for (let j = 0; j < 10; j++) {
+    //             if (i == 5 && j == 5) {
+    //                 break leb;
+    //             }
+    //             // console.log(j, '$$$$$$$$$$$for循环');
+    //             console.log(j, '我是内循环'); 
+    //         }
+
+    //     }
+
+    //break终止本次循环 labe是指定摸某个循环
+    //   continue是跳过本次判断 继续执行后面
+
+    // a:
+    //     for (var i = 0; i < 10; i++) {
+    //         console.log(i, '========外层for循环');
+    //         for (var j = 0; j < 10; j++) {
+    //             if (i == 5 && j == 5) {
+    //                 break a;
+    //             }
+    //             // console.log(j, '$$$$$$$$$$$for循环');
+    //             console.log(j, '@@@@@@我是内循环');
+    //         }
+
+    //     }
+    // console.log(i, j);
+
+
+    //求2-200之间所有的数
+
+    // for (let i = 2; i < 100; i++) {
+    //     var flag = true;
+
+    //     for (let j = 2; j < i; j++) {
+    //         if (i % j == 0) {
+    //             flag = false;
+    //         }
+    //     }
+
+    //     if (flag) {
+    //         console.log(i);
+    //     }
+    // }
+
+    console.log('===========');
+
+    var num = 0;
+
+    outermost:
+
+        for (var i = 0; i < 10; i++) {
+            console.log(i, '========外层for循环');
+            for (var j = 0; j < 10; j++) {
+
+                if (i == 5 && j == 5) {
+                    break outermost;
+                }
+
+                num++;
+
+                console.log(j, '@@@@@@我是内循环');
+            }
+        }
+
+    // alert(num++); //55
+    console.log(num);
+</script>
+
+</html>
