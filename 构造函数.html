@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function Cat() {}
+
+
+    Cat.prototype.name = 'byd'
+
+    let cc = new Cat()
+        //_proto_是属于每一个实例化对象 而不是构造函数
+
+    //_proto_（门牌号）是每个实例化对象的原型的容器就是装prototype（通过键名访问原型）
+    console.log(Cat === Cat.prototype.constructor);
+
+
+
+    // function text() {
+    //     let a = 1
+
+    //     function text2() {
+    //         a++
+
+    //         console.log(a);
+    //     }
+
+    //     return text2
+    // }
+
+    // let res = text()
+    // res()
+    // res()
+
+    // res()
+
+    // var res = (function() {
+    //     let a = 1;
+
+    //     function text() {
+
+    //         a++
+    //         console.log(a);
+    //     }
+
+    //     // window.text = text
+    //     return text
+
+    // })()
+
+    // // let res = text()
+    // res()
+    // res()
+    // res()
+
+    ;
+    (function() {
+        function test(opt) {
+            this.x = opt.firstNum
+            this.y = opt.SecondNum
+        }
+        test.prototype = {
+            plus: function() {
+                return this.x + this.y
+            },
+            minus: function() {
+                return this.x - this.y
+
+            },
+            muls: function() {
+                return this.x * this.y
+
+            },
+            div: function() {
+                return this.x / this.y
+            }
+        }
+        window.Compute = test
+    })()
+    var compute = new Compute({
+        firstNum: 1,
+        secondNum: 2
+    })
+    console.log(compute.plus());
+    console.log(compute.minus());
+    console.log(compute.muls());
+    console.log(compute.div());
+</script>
+
+</html>
