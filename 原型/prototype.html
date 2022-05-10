@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function Text() {}
+    Text.prototype.name = '豆豆'
+
+    Text.prototype = {
+        name: 'A'
+    }
+    let text = new Text()
+
+
+    // console.log(Text.name);
+    console.log(text.name);
+    console.log(Text.prototype === text.__proto__);
+
+    // console.log([
+    //     [Prototype]
+    // ] === _proto_);
+
+
+    // function Text() {
+    //     var this = {
+    //         _proto_: Text.prototype = {
+    //             name: '豆豆'
+    //         }
+    //     }
+
+    // }
+</script>
+
+</html>
