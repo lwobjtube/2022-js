@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //求1-100 遇到3跳出循环
+    var sum = 0;
+    for (var i = 1; i < 100; i++) {
+        if (i % 10 == 3) {
+            break
+        }
+        sum += i
+    }
+    console.log(sum);
+
+    //求1-100 遇到3跳过索引个位数的3
+    var sum = 0;
+    for (var i = 1; i < 100; i++) {
+        if (i % 10 == 3) {
+            continue
+        }
+        sum += i
+    }
+    console.log(sum);
+
+
+    //求1-100 不能被7整除的整数之和 continue
+    var sum = 0;
+    for (var i = 1; i < 100; i++) {
+        if (i % 7 == 0) {
+            continue
+        }
+        sum += i
+    }
+    console.log(sum);
+
+
+    //求200-300 之间基数之和 continue
+    var sum3 = 0;
+    for (var i = 200; i <= 300; i++) {
+        if (i % 2 == 0) {
+            continue
+        }
+        sum3 += i
+    }
+    console.log(sum3); //12500
+
+    //求200-300被7整除的整数（第一个）
+
+    for (var i = 200; i <= 300; i++) {
+        if (i % 7 == 0) {
+            console.log(i);
+            break
+
+        }
+        //
+        // console.log(i);
+    }
+</script>
+
+</html>
