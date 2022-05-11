@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    // function a(num) {
+    //     return num + 100
+    // }
+
+    // function a(num) {
+    //     return num + 200
+    // }
+
+    // let res = a(100)
+
+    //console.log(res); //覆盖第一个函数
+
+    // function Setname(obj) {
+    //     obj.name = '零零零零';
+
+    //     // obj = new Object()
+
+    //     obj.name = '我变了'
+
+    //     console.log(obj.name);
+
+    // }
+
+    // let res = new Object()
+    // Setname(res)
+    // console.log(res, '111');
+    // console.log(res.name);
+
+
+    // function abs(num) {
+    //     num += 1
+    //     return num
+    // }
+    // let a = 1
+    // let res = abs(1)
+    // console.log(a);
+    // console.log(res);
+    // //参数传参（原始类型） 是值传递.。
+
+    // function hello(obj) {
+    //     obj.name = 'lucy';
+    //     obj = new Object(); // 新赋值了一个地址
+    //     obj.name = 'lili';
+    //     return obj;
+    // }
+
+    // var person = new Object();
+    // person.name = 'jon';
+    // var newPerson = hello(person);
+    // console.log(person.name); // lucy 
+    // console.log(newPerson.name); // lili
+
+    // function setName(obj) {
+    //     obj.name = "James";
+    //     obj = new Object();
+    //     obj.name = "Leon"
+    //     return obj
+    // }
+
+    // var person = new Object();
+    // person.name = "Jeremy";
+
+    // console.log(person.name);
+    // console.log(setName(person).name);
+
+    // let a = {
+    //     name: '老吴'
+    // }
+
+    // let b = a
+    // console.log(a, b);
+
+    // b = '张三'
+
+    function age(obj) {
+        obj.name = '我改变了外老吴噢噢噢噢';
+        obj = new Object()
+        obj.name = '我是新创建的内存';
+
+    }
+    // 这里是函数内部重写了obj，重写的obj是一个局部对象。当函数执行完后，立即被销毁。
+    let preson = new Object()
+    age(preson)
+    console.log(preson.name);
+    //console.log(age(preson).name);
+    //var obj = new Object();会重新给obj分配一个地址 那么它就不在指向有name = '我改变了外老吴噢噢噢噢'
+    //相当于把实参obj和形参obj的地址都改了;
+
+
+    // function setName(obj) {
+    //     obj.name = '我'
+    //     obj = new Object()
+    //     obj.name = '修改了'
+    //     return obj
+    // }
+
+    // let person = new Object()
+    //     // console.log(person);
+    // let res = setName(person)
+    // console.log(res.name);
+    // console.log(person.name);
+
+    // var testC = {};
+
+    // function testObject(example) {
+    //     example.name =
+
+    //         22
+
+
+
+    // }
+    // console.log(testC);
+    // testObject(testC)
+    // console.log(testC.name);
+
+    //https://blog.csdn.net/handsomexiaominge/article/details/97306301  https://www.jianshu.com/p/313fa4de9c9e
+
+    //https://blog.csdn.net/handsomexiaominge/article/details/97306301可能会有人认为，在js中，对于值类型是按值传递，对于引用类型是按引用传递，然而，这是错误的。事实上，在js中，不管对于值类型还是引用类类型，都是按值传递的，区别在于，对于值类型，传参发生时，复制的是类型本身的值，而对于引用类型，复制的是类型的地址。我们来看下面这段代码，可以用来否定引用类型是按引用传参这个观点
+</script>
+
+</html>
