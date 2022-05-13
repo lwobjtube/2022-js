@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // practice = function() {
+    //     let arr = [{
+    //         name: 'a',
+    //         menu: 2
+    //     }, {
+    //         name: 'a',
+    //         menu: 21
+    //     }, {
+    //         name: 'g',
+    //         menu: 2
+    //     }, {
+    //         name: 'g',
+    //         menu: 3
+    //     }, {
+    //         name: 'g',
+    //         menu: 3
+    //     }, {
+    //         name: 'c',
+    //         menu: 4
+    //     }, {
+    //         name: 'c',
+    //         menu: 44
+    //     }, ]
+
+    // let res = arr.reduce((temp, item) => {
+    //     console.log(temp, item);
+    //     //0=>  name:'a',menu:2
+    //     //name:'a',menu:2 => 'a'+2=>a2 ||a：2
+    //     temp[temp.name] = (temp[temp.name]) || item.menu
+    //         // temp[temp.name] = (temp[temp.name]) + item.menu || item.menu
+
+    //     // console.log(item.name, item.menu);
+    //     return temp
+    // }, {})
+
+    // let cl = Object.entries(res)
+    // console.log(cl);
+    // let zz = cl.map(item => {
+    //     return {
+    //         name: item[0],
+    //         menu: item[1]
+    //     }
+    // })
+    // console.warn(zz)
+
+    // }
+
+
+
+
+
+
+
+
+
+
+
+    // practice()
+
+    let pre = function() {
+        let arr = [{
+            name: 'a',
+            menu: 2
+        }, {
+            name: 'a',
+            menu: 21
+        }, {
+            name: 'g',
+            menu: 2
+        }, {
+            name: 'g',
+            menu: 3
+        }, {
+            name: 'g',
+            menu: 3
+        }, {
+            name: 'c',
+            menu: 4
+        }, {
+            name: 'c',
+            menu: 44
+        }, ]
+
+        let res = arr.reduce((prm, item) => {
+
+            prm[item.name] = prm[item.name] + item.menu || item.menu
+            return prm
+        }, {})
+
+        console.log(res);
+    }
+    pre()
+</script>
+
+</html>

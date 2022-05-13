@@ -205,53 +205,53 @@
 
     // console.log(name.a, b);
 
-    practice = function() {
-        let arr = [{
-                name: 'a',
-                menu: 2
-            }, {
-                name: 'a',
-                menu: 21
-            }, {
-                name: 'g',
-                menu: 2
-            }, {
-                name: 'g',
-                menu: 3
-            }, {
-                name: 'g',
-                menu: 3
-            }, {
-                name: 'c',
-                menu: 4
-            }, {
-                name: 'c',
-                menu: 44
-            }, ]
-            //Object.entries() 可以把一个对象的键值以数组的形式遍历出来
-            // return Object.entries(arr.reduce((a, b) => {
-            //     console.log(b);
-            //     a[b.name] = (a[b.name] + b.menu) || b.menu
-            //     return a
-            // }, {}))
+    // practice = function() {
+    //     let arr = [{
+    //             name: 'a',
+    //             menu: 2
+    //         }, {
+    //             name: 'a',
+    //             menu: 21
+    //         }, {
+    //             name: 'g',
+    //             menu: 2
+    //         }, {
+    //             name: 'g',
+    //             menu: 3
+    //         }, {
+    //             name: 'g',
+    //             menu: 3
+    //         }, {
+    //             name: 'c',
+    //             menu: 4
+    //         }, {
+    //             name: 'c',
+    //             menu: 44
+    //         }, ]
+    //Object.entries() 可以把一个对象的键值以数组的形式遍历出来
+    // return Object.entries(arr.reduce((a, b) => {
+    //     console.log(b);
+    //     a[b.name] = (a[b.name] + b.menu) || b.menu
+    //     return a
+    // }, {}))
 
-        let res = Object.entries(arr)
-        console.log(res);
-        // res.forEach(element => {
-        //     console.log(res);
-        // });
+    // let res = Object.entries(arr)
+    // console.log(res);
+    // res.forEach(element => {
+    //     console.log(res);
+    // });
 
 
 
-        // arr.reduce(function(a, b) {
-        //     console.log(a, b);
-        //     a[b.name] = (a[b.name] + b.menu) || b.menu
-        //     return a
-        // }, {})
+    // arr.reduce(function(a, b) {
+    //     console.log(a, b);
+    //     a[b.name] = (a[b.name] + b.menu) || b.menu
+    //     return a
+    // }, {})
 
-    }
-    practice()
-        // console.log(practice());
+    // }
+    // practice()
+    // console.log(practice());
 
     // var obj = {
     //     name: '小明',
@@ -259,6 +259,82 @@
     //     sex: '男'
     // };
     // console.log(Object.entries(obj));
-</script>
 
-</html>
+
+    // let arrr = [1, 2, 3]
+
+    // let res = arrr.reduce((temp, item) => {
+    //     console.log(temp, item);
+    //     return temp + item
+
+    // })
+
+    // console.log(res);
+
+    //案例 reduce 累加数字
+    // let arr = [1, 2, 3, 4, 5]
+
+    // let res = arr.reduce((a, b) => {
+    //     console.log(a, b);
+    //     return a + b
+    // }, 0)
+
+    // console.log(res);
+
+
+    practice = function() {
+        let arr = [{
+            name: 'a',
+            menu: 2
+        }, {
+            name: 'a',
+            menu: 21
+        }, {
+            name: 'g',
+            menu: 2
+        }, {
+            name: 'g',
+            menu: 3
+        }, {
+            name: 'g',
+            menu: 3
+        }, {
+            name: 'c',
+            menu: 4
+        }, {
+            name: 'c',
+            menu: 44
+        }, ]
+
+        // let obj = {}
+        // for (let i = 0; i < arr.length; i++) {
+        //     console.log(obj, arr[i]);
+        //     obj[arr[i].name] = obj[arr[i].name] + arr[i].menu || arr[i].menu
+        // }
+        // console.log(obj)
+
+        //  1 pre ={}     item = {name:a,m:2}   {a:2}
+        //  2 pre = {a:2} item = {name:a,m:21}  {a:23}
+        //  3 pre = {a:23} item = {name:g,m:2}  {a:23,g:2}
+        //  4 pre = {a:23,g:2} item = {name:g,m:3}  {a:23,g:5}
+        let res = arr.reduce((pre, item) => {
+            console.log(pre, item);
+            pre[item.name] = pre[item.name] + item.menu || item.menu
+                // console.log(pre, item);
+            return pre
+        }, {})
+
+        //     let oo = Object.entries(res)
+
+        //     oo = oo.map(item => {
+        //         return {
+        //             name: item[0],
+        //             menu: item[1]
+        //         }
+        //     })
+        //     console.log(oo);
+        //     // console.log(res);
+
+    }
+    practice()
+</script>
