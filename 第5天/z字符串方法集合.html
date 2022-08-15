@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    let a = 'hello'
+
+    console.log(a.indexOf('l')); //一个参数，检查字符串首次出现的下标 位置
+    console.log(a.indexOf('l', 3)); //第二个参数表示，字符串搜索的首次起始位置。 
+
+    console.log(a.lastIndexOf('l')); //检查字符串最后出现的下标位置
+    console.log(a.lastIndexOf('l', 3)); //从0下标开始一直搜索到第二个参数作为查找的终点。下标0开始到下标3结束就不查了。（最后出现的下标位置）
+
+    //replace是替换------------一般是正则写法
+    //math是全局匹配-----------一般是正则写法
+
+
+    console.log(a.search('q')); //类似indexof  返回查找的字符的下标，但是是首次出现的下标 位置，没有找到 就返回-1
+
+    //slice()  和substring功能一致，都是字符串截取。  
+    //1个参数的写法就是从这个下标开始一直截取到字符串的末尾。 console.log(a.slice(2));  //llo
+    // 2个参数 的写法，从第一个参数下标开始,一直截取到第二个参数-1 的位置。  //console.log(a.slice(0, 3)); hel
+    console.log(a.slice(0, 3));
+</script>
+
+</html>

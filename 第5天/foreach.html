@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //可遍历对象数组的方法
+    function getarr(array) {
+        let key
+        if (Array.isArray(array)) {
+            array.forEach((item) => {
+                console.log(item);
+            })
+
+        } else {
+            for (key in array) {
+                console.log(key, array[key])
+            }
+        }
+    }
+    let arr = [12, 3]
+
+    getarr(arr)
+
+    let obj = {
+        x: 1,
+        y: 2,
+        z: 3
+    }
+
+
+    getarr(obj)
+</script>
+
+</html>

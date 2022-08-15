@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    let arr = [3, 4, 5, 2, 3, 3, 1, 66, 3, 99]
+
+    // for (let i = 0; i < arr.length; i++) {
+
+    //     for (let j = i + 1; j < arr.length; j++) {
+    //         if (arr[i] == arr[j]) {
+    //             arr.splice(j, 1)
+    //             j--
+    //         }
+    //     }
+    // }
+
+    // for (let i = 0; i < arr.length; i++) {
+
+    //     if (arr.indexOf(arr[i]) != i) {
+    //         arr.splice(i, 1)
+    //         i--
+    //     }
+    // 
+    // let newarr = []
+
+    // for (let i = 0; i < arr.length; i++) {
+
+    //     if (newarr.indexOf(arr[i]) === -1) {
+    //         newarr.push(arr[i])
+    //     }
+    // }
+
+
+
+    // // console.log(arr);
+    // console.log(newarr);
+
+    // for (let i = 0; i < arr.length; i++) {
+    //     for (let j = i + 1; j < arr.length; j++) {
+    //         if (arr[i] === arr[j]) {
+    //             arr.splice(j, 1)
+    //             j--
+    //         }
+    //     }
+    // }
+
+    // document.write(arr);
+
+    let szarr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+        //  szarr.splice(5, 0, 100) //添加
+        //szarr.splice(0, 1) //删除
+        // szarr.splice(0, 1, 'wzx') //替换
+
+    szarr.splice(3, 1, 'wuzhongxiang')
+
+    // szarr.splice(2)
+    console.log(szarr);
+
+    szarr.pop //，末尾
+    szarr.unshift //首位
+    szarr.splice //任意值
+
+    // 1 个数 为 删除  从这个下标删到末尾  2-5 下标
+    // 2 个数 为 删除  从第一个数的下标开始，删除第二个数的个数(个数)
+
+    // 3 个数 为 添加 从第一个数开始，第二个数如果为0则为不删除元素，后面表示添加的数据
+
+    //数组截取方法只有 slice
+    //表示从第一个的下标开始截取到第二个下标-1的位置。
+
+    //splice和slice区别
+    //1>splice会改变原数组，参数不能为负数。
+
+    let slarr = [1, 2, 3, 4, 5, 6]
+    console.log(slarr);
+    console.log(slarr.slice(1, 4));
+
+
+    //sort 排序，是按照数字首位的ascii码进行比较、
+
+    // let arrsort = [1, 3, 21, 5, 7, 9, 0]
+
+    // function sumsoet(a, b) {
+    //     return a - b
+    // }
+
+    // console.log(arrsort.sort(sumsoet));
+
+    let obj = [{
+            name: "上海"
+        }, {
+            name: "北京"
+        }, {
+            name: "武汉"
+        }]
+        //字符串比较大小 排序 
+    obj.sort(function(a, b) {
+        return a.name.localeCompare(b.name)
+    })
+    console.log(obj, '1111---------------');
+
+
+    let qwe = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    //let res = qwe.slice(3, 4)
+
+
+    //console.log(res);
+
+    let qweres = qwe.every(function(value, index, array) {
+        // console.log(value, index, array);
+        if (value > 6) {
+            return value
+        }
+
+    })
+    console.log(qwe);
+
+    console.log(qweres);
+
+    //every:一假即假,some:一真即真
+</script>
+
+</html>

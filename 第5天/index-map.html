@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    let arr = [{
+        id: '1',
+        name: 'qqq'
+    }, {
+        id: '2',
+        name: 'qwe'
+    }, {
+        id: '3',
+        name: 'oooo'
+    }]
+
+
+    //抽离公共方法  array=数组  attarsuer=数组对象
+    function getAttrs(array, attruser) {
+        let res = array.map((item) => {
+            return item[attruser]
+        })
+
+        return res
+    }
+    // console.log(res);
+
+    console.log(getAttrs(arr, 'name')); //qqq  qwe  000
+    console.log(getAttrs(arr, 'id')); //123
+
+
+    // let cs = [{
+    //     name: "1"
+    // }, {
+    //     name: "11"
+    // }, {
+    //     name: "111"
+    // }]
+
+    // console.log(cs.name);
+</script>
+
+</html>

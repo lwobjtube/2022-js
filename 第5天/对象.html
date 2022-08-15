@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    let obj = {
+
+
+        bil() {
+
+            let _this = this
+            console.log('我');
+            f()
+
+            function f() {
+                console.log(this); //指向windows
+
+                console.log(_this); //指向bil
+            }
+
+
+        }
+    }
+
+    obj.bil()
+    console.log('============');
+
+    var obj1 = {
+        aa: 1,
+        b() {
+            console.log(this.aa);
+        }
+    }
+
+    var fun = obj1.b
+
+    fun()
+
+
+    function Fun() {
+        console.log(this);
+    }
+    let sl = new Fun()
+
+    console.log(sl);
+
+    //解析：fun访问的是对象obj的b属性，即var fun=function(){alert(this.a)}。this值要等到代码执行的时候才能确定
+    //作为对象调用时，指向该对象obj1.b()  //指向obj1
+    //作为函数调用时  var fun=obj1.b fun()  指向window  但是如果访问的是对象里的值那就是会报未定义、
+    //作为构造函数调用时， this指向当前实例对象
+
+    //表达式函数声明》匿名函数中的this指向是windows对象
+    let f5 = function() {
+        console.log(this.a);
+    }
+    f5()
+
+
+    console.log(' ==========================================');
+
+
+
+    function a() {
+
+        console.log(this);
+
+    }
+
+    a()
+        //
+
+
+    function cre(name) {
+        let obj = new Object()
+
+        obj.name = name
+        obj.stay = function() {
+            console.log(this.name, '很强');
+        }
+        console.log(name);
+
+        return obj
+    }
+
+    let res = cre('老吴')
+
+    res.stay()
+</script>
+
+</html>

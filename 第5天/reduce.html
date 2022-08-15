@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    //计算 
+    // let res = arr.reduce((target, nums) => {
+    //     return target + nums
+    // }, 2)
+
+    // console.log(res);
+
+
+    //去重
+    let arr = [1, 2, 3, 1, 2, 3, 4, 5, 6, 7]
+    const res = []
+
+    arr.reduce((pre, next) => {
+        if (!pre.get(next)) {
+            pre.set(next, 1)
+
+            res.push(next)
+        }
+
+        return pre
+    }, new Map())
+    console.log(arr);
+    console.log(res);
+</script>
+
+</html>

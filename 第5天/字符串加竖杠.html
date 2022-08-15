@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    let str = "a-b-c-d-e-f-g-h"
+    let s = ''
+        // for (let i = 0; i < str.length; i++) {
+        //     s += str[i]
+        // }
+        // s = s.substring(0, s.length - 1)
+
+    // console.log(s);
+
+    console.log(str);
+    let ss = str.split('-').join('|')
+
+    console.log(ss);
+    // console.log(str.substring(3, 2)); // 第二开始 到第5结束
+    //substring和slice的区别，substring参数如果为负数，直接变为0，然后运算。substring两个参数不需要保证前面的一定小于后面的，取两者中小的作为start
+</script>
+
+</html>
