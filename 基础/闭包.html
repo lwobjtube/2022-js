@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    function cb() {
+
+        let cbres = '哈哈哈哈函数'
+            function ncp(){
+                        console.log(cbres);
+            }
+            return cbres
+
+    }
+
+        let res=cb()
+        console.log(res);
+
+        //ncp函数可以访问外部函数。cb中的变量cbres，因此可以输出正确的值，即使cb已经执行完成，ncp函数仍然可以访问cbres变量的值（闭包的特性）
+
+
+</script>
+
+</html>

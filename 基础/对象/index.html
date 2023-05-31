@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+
+
+
+
+
+
+
+
+
+
+    // batchCouponResent(){
+    //     const ids = []
+    //     this.tableSelectList.forEach((item) => ids.push(item.id))
+    //     activity.resentMessage((ids ]).then(async (response) => {
+    //         this.$message({ message: '批量推送成功'，type: "success"})
+    //         await this.onUpdateList()
+    //         localstorage.setItem('associateSearchUpdateList', true)
+    //     })
+
+    // }
+
+
+
+
+    let arr = [
+        { createBy: 1234, id: 001, index: 1, test1: '测试1', test2: '测试2' },
+        { createBy: 1234, id: 001, index: 1, test1: '测试1', test2: '测试2' },
+        { id: 001, index: 1, test1: '测试1', test2: '测试2' }
+
+    ]
+    let newArr = []
+    arr.forEach((item) => {
+        if (arr[item] != undefined && arr[item] != null) {
+            newArr.push(item)
+        } else {
+            let newobj = {}
+            Object.keys(item).forEach((key)=>{
+                if(key!='id'&&key!='index'){
+                    newobj[key]=item[key]
+                }
+            })
+            newArr.push(newobj)
+        }
+    })
+
+    console.log(newArr)
+
+
+</script>
+
+</html>

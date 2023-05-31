@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // // // 输入的时间范围
+    // let val = ['2023-03-03 00:00:00', ' 2023-03-06 00:00:00'];
+
+    // // 将结束时间加一天并调整为前一天的 23:59:59
+    // let pp = new Date(val[1]).getTime() + (3600 * 1000 * 24);
+    // let endDate = new Date(pp - 1000);
+    // console.log('选择的时间2', endDate);
+
+    // // 将日期字符串转换为 yyyy-mm-dd hh:ii:ss 
+    // function isoToDatetime(isoStr) {
+    //     if (isoStr === null || isoStr === undefined) {
+    //         return '';
+    //     }
+    //     let date = new Date(isoStr);
+    //     let Y = date.getFullYear();
+    //     let M = (date.getMonth() + 1 < 10 ? '0' : '') + (date.getMonth() + 1);
+    //     let D = (date.getDate() < 10 ? '0' : '') + date.getDate();
+    //     let H = (date.getHours() < 10 ? '0' : '') + date.getHours();
+    //     let M2 = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
+    //     let S = (date.getSeconds() < 10 ? '0' : '') + date.getSeconds();
+    //     return Y + '-' + M + '-' + D + ' ' + H + ':' + M2 + ':' + S;
+    // }
+
+    // // 输出开始时间和结束时间
+    // let startTime = val[0];
+    // let endTime = isoToDatetime(endDate.toISOString());
+    // console.log('开始时间', startTime);
+    // console.log('结束时间', endTime);
+
+    // // 输入的时间范围
+    // let val = ['2023-03-03 00:00:00', ' 2023-03-07 00:00:00'];
+
+    // // 将结束时间加一天并调整为前一天的 23:59:59
+    // let pp = new Date(val[1]).getTime() + (3600 * 1000 * 24);
+    // let endDate = new Date(pp - 1000);
+    // console.log('选择的时间2', endDate);
+
+    // // 将日期字符串转换为 yyyy-mm-dd hh:ii:ss 
+    // function isoToDatetime(isoStr) {
+    //     if (isoStr === null || isoStr === undefined) {
+    //         return '';
+    //     }
+    //     let date = new Date(isoStr);
+    //     let Y = date.getFullYear();
+    //     let M = (date.getMonth() + 1 < 10 ? '0' : '') + (date.getMonth() + 1);
+    //     let D = (date.getDate() < 10 ? '0' : '') + date.getDate();
+    //     let H = (date.getHours() < 10 ? '0' : '') + date.getHours();
+    //     let M2 = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
+    //     let S = (date.getSeconds() < 10 ? '0' : '') + date.getSeconds();
+    //     return Y + '-' + M + '-' + D + ' ' + H + ':' + M2 + ':' + S;
+    // }
+
+    // // 输出开始时间和结束时间
+    // let startTime = val[0];
+    // let endTime = isoToDatetime(endDate.toISOString());
+    // console.log('开始时间', startTime);
+    // console.log('结束时间', endTime);
+    
+    let val = ['2023-03-03 00:00:00', '2023-03-07 00:00:00'];
+
+let endDate = new Date(val[1]);
+endDate.setDate(endDate.getDate() + 1);
+endDate.setSeconds(endDate.getSeconds() - 1);
+
+function isoToDatetime(isoStr) {
+  if (isoStr === null || isoStr === undefined) {
+    return '';
+  }
+  let date = new Date(isoStr);
+  let Y = date.getFullYear();
+  let M = (date.getMonth() + 1 < 10 ? '0' : '') + (date.getMonth() + 1);
+  let D = (date.getDate() < 10 ? '0' : '') + date.getDate();
+  let H = (date.getHours() < 10 ? '0' : '') + date.getHours();
+  let M2 = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
+  let S = (date.getSeconds() < 10 ? '0' : '') + date.getSeconds();
+  return Y + '-' + M + '-' + D + ' ' + H + ':' + M2 + ':' + S;
+}
+
+let startTime = val[0];
+let endTime = isoToDatetime(endDate.toISOString());
+let timeRange = startTime + ' - ' + endTime;
+
+console.log('开始时间', startTime);
+console.log('结束时间', endTime);
+console.log('时间范围', timeRange);
+
+
+// // 输入的时间范围
+// let val = ['2023-03-03 00:00:00', ' 2023-03-06 00:00:00'];
+
+// // 将结束时间加一天并调整为前一天的 23:59:59
+// let endDate = new Date(val[1]);
+// endDate.setDate(endDate.getDate() + 1);
+// endDate.setHours(0, 0, 0, 0);
+// endDate.setTime(endDate.getTime() - 1);
+
+// // 将日期字符串转换为 yyyy-mm-dd hh:ii:ss 
+// function isoToDatetime(isoStr) {
+//     if (isoStr === null || isoStr === undefined) {
+//         return '';
+//     }
+//     let date = new Date(isoStr);
+//     let Y = date.getFullYear();
+//     let M = (date.getMonth() + 1 < 10 ? '0' : '') + (date.getMonth() + 1);
+//     let D = (date.getDate() < 10 ? '0' : '') + date.getDate();
+//     let H = (date.getHours() < 10 ? '0' : '') + date.getHours();
+//     let M2 = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes();
+//     let S = (date.getSeconds() < 10 ? '0' : '') + date.getSeconds();
+//     return Y + '-' + M + '-' + D + ' ' + H + ':' + M2 + ':' + S;
+// }
+
+// // 输出开始时间和结束时间
+// let startTime = val[0];
+// let endTime = isoToDatetime(endDate.toISOString());
+// console.log('开始时间', startTime);
+// console.log('结束时间', endTime); 
+// console.log('时间范围', startTime + ' - ' + endTime);  // 输出时间范围
+
+
+
+    //     let timeRange = '2023-03-03 00:00:00 - 2023-03-06 00:00:00';
+
+    //     let [startTimeStr, endTimeStr] = timeRange.split(' - ');
+    //     let startTime = new Date(startTimeStr);
+    //     let endTime = new Date(endTimeStr);
+
+    //     endTime.setDate(endTime.getDate() + 1);
+    //     endTime.setHours(0, 0, 0, 0);
+    //     endTime.setTime(endTime.getTime() - 1);
+
+    //     let formattedStartTime = formatDate(startTime);
+    //     let formattedEndTime = formatDate(endTime);
+
+    //     console.log(`${formattedStartTime} - ${formattedEndTime}`);
+    //     console.log('---------------');
+
+    //     function formatDate(date) {
+    //         let year = date.getFullYear();
+    //         let month = padZero(date.getMonth() + 1);
+    //         let day = padZero(date.getDate());
+    //         let hours = padZero(date.getHours());
+    //         let minutes = padZero(date.getMinutes());
+    //         let seconds = padZero(date.getSeconds());
+
+    //         return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+    //     }
+
+    //     function padZero(number) {
+    //         return number < 10 ? '0' + number : number;
+    //     }
+    //    console.log(`${formattedStartTime} - ${formattedEndTime}`); 
+
+    // let timeRange = '2023-03-03 00:00:00 - 2023-03-06 00:00:00';
+
+    // let [startTimeStr, endTimeStr] = timeRange.split(' - ');
+    // let startTime = new Date(startTimeStr);
+    // let endTime = new Date(endTimeStr);
+
+    // endTime.setDate(endTime.getDate() + 1);
+    // endTime.setHours(0, 0, 0, 0);
+    // endTime.setTime(endTime.getTime() - 1);
+
+    // let formattedStartTime = formatDate(startTime);
+    // let formattedEndTime = formatDate(endTime);
+
+    // let newTimeRange = `${formattedStartTime} - ${formattedEndTime}`;
+    // console.log(`原始时间范围：${timeRange}`);
+    // console.log('处理后的时间范围',newTimeRange);
+
+    // function formatDate(date) {
+    //   let year = date.getFullYear();
+    //   let month = padZero(date.getMonth() + 1);
+    //   let day = padZero(date.getDate());
+    //   let hours = padZero(date.getHours());
+    //   let minutes = padZero(date.getMinutes());
+    //   let seconds = padZero(date.getSeconds());
+
+    //   return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+    // }
+
+    // function padZero(number) {
+    //   return number < 10 ? '0' + number : number;
+    // }
+
+
+    // let timeRange = '2023-03-03 00:00:00 - 2023-03-06 23:59:59';
+
+    // let [startTimeStr, endTimeStr] = timeRange.split(' - ');
+    // let startTime = new Date(startTimeStr);
+    // let endTime = new Date(endTimeStr);
+
+    // endTime.setDate(endTime.getDate() + 1);
+    // endTime.setHours(0, 0, 0, 0);
+    // endTime.setTime(endTime.getTime() - 1);
+
+    // let formattedStartTime = formatDate(startTime);
+    // let formattedEndTime = formatDate(endTime);
+
+    // console.log(`${formattedStartTime} - ${formattedEndTime.replace(/(\d{4}-\d{2}-\d{2})/, function (match, p1) { return formatDate(new Date(p1)); })}`);
+
+    // function formatDate(date) {
+    //     let year = date.getFullYear();
+    //     let month = padZero(date.getMonth() + 1);
+    //     let day = padZero(date.getDate());
+    //     let hours = padZero(date.getHours());
+    //     let minutes = padZero(date.getMinutes());
+    //     let seconds = padZero(date.getSeconds());
+
+    //     return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+    // }
+
+    // function padZero(number) {
+    //     return number < 10 ? '0' + number : number;
+    // }
+
+
+</script>
+
+</html>

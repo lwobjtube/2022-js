@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    class Person {
+
+        constructor(name) {
+            this.name = name
+        }
+
+    }
+    //添加到res实例的原型上
+    Person.prototype.fly=()=>{
+        console.log('原型上的方法');
+    }
+    const res = new Person('老吴')
+    //xiaoMing 是通过类 Person 实例化出来的对象。对象 xiaoMing 
+    //是按照类 Person 这个模板，实例化出来的对象。
+    //实例化出来的对象拥有类预先订制好的结构和功能。
+
+    console.log(res);
+    console.log(Object.getPrototypeOf(res));
+  
+
+    res.fly()
+    console.log(res);
+    // 访问一个对象的原型对象
+    // 对象原型_proto_ 
+    // getPrototypeOf (安全)
+    // 原型对象中的数据
+    // 1.对象的数据 属性方法等
+    // 2.constructor 对象的构造函数
+
+    //原型链
+    //读取对象属性时，会优化对象自身属性，
+    //如果对象中有，则使用，没有则去对象中寻找
+   //如果原型中有，则使用，没有则去对象中寻找
+    //直到找到Object对象的原型，Object的原型没有原型（为null）
+    //如果还是没找到就返回undefined
+
+    //小知识点: 作用域链找变量的链，找不到会报错，原型链，是找属性的链，找不到会返回undefined
+
+
+
+    //注意  千万不要通过类的实例去修改原型， 修改原型先得创建实例，麻烦，不安全
+    //处理通过—_proto_能访问对象的原型外，还可以通过prototype属性来访问实例的原型，修改原型时，最好通过通过类去修改。
+    //好处 1.一修改就是修改所有实例的原型，2.无需创建实例即可完成对类型的的修改。
+    //原则： 原型尽量不要手动改，要改也不要通过实例对象去改，通过类.prototype属性去修改。最好不要直接给prototype直接赋值。
+
+
+
+</script>
+
+</html>

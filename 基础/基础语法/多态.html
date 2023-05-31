@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    // function fn(a) {
+    //     a={}
+    //     a.name = "猪八戒"
+    //     console.log(a);
+    // }
+    // let obj = {
+    //     name: '嗡嗡嗡'
+    // }
+    // fn(obj)
+    // console.log(obj,'--');
+
+    // function tes(fUn){
+    //     // fUn(mydata)
+    // }
+
+
+    // function tes2(fUndata){
+    //    alert(fUndata)
+    // }
+    // tes(tes2('老吴'))
+
+
+//     var a='1'
+
+// function num (a){
+//         console.log(a);
+//         a=3
+//         console.log(a);
+// } 
+
+// num(a)
+
+// console.log(a);
+
+
+console.log(a);
+
+var a=2  //函数fff2
+
+function a(){
+    console.log('f',ff2);
+}
+
+console.log(a);  //2
+
+var a=3
+console.log(a);  //3
+
+var a=function(){
+    alert(4)
+}
+
+console.log(a);  //4
+
+var a
+console.log(a);  //不执行，因为提升了。
+
+(function(){
+        console.log('aaaaaaaaa');
+})()
+
+
+
+const obj={
+    sayomvl(){
+        console.log('我是方法');
+
+            const ta =()=>{
+                        console.log('ta',this);
+            }
+            ta()
+    }
+}
+
+obj.sayomvl()
+//this函数没有自己的this，他的this由外层决定  属性名和属性值  可以简化~~
+
+
+//多态
+class Person{
+      constructor(name){
+            this.name=name
+      }
+}
+
+
+class Dog{
+      constructor(name){
+            this.name=name
+      }
+}
+
+//这就是多态
+function sayhello(obj){
+        console.log('hhh'+obj.name);
+}
+
+let res=new Person('小李')
+let dog=new Dog('旺财')
+sayhello(dog)
+console.log(res,dog);
+</script> 
+  
+</html> 

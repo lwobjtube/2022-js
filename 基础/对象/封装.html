@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    class Person {
+        #name
+        #age
+                constructor(name,age){
+                        this.#name=name
+                        this.#age=age
+                }
+                    //读取
+                get name(){
+                    console.log('get执行了方法');
+                    return this.#name
+                }
+                get age(){
+                    console.log('ssssset执行了方法');
+                    return this.#age
+                }
+
+                //修改
+             set name(name){
+                    this.#name=name
+             }
+             set age(age){
+                    this.#age=age
+             }
+
+    }
+
+const res=new Person('老吴',24)
+
+res.age='100'
+console.log(res.age);
+</script>
+
+</html>

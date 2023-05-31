@@ -57,6 +57,30 @@
         console.log(10 + 12 + 22);
 
         console.log(20 % 3); //取余
+
+
+        let wu = [1, 2, 3, 4, 5, 6]
+
+        for (let a of wu) {
+            console.log(a);
+        }
+
+
+
+
+const num = 0.1555;
+const scale = 10000n;
+
+const result2 = BigInt(Math.round(num * scale));
+const result3 = result2 / scale; // 使用BigInt类型的除法运算符“/”进行整数除法运算
+console.log(Number(result3.toFixed(4))); // 输出0.1555
+
+
+
+
+
+
+
     </script>
 </body>
 

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // class Person {
+
+    //     constructor(name) {
+    //         this.name = name
+    //     }
+
+    //     sayhello() {
+    //         console.log('对对对对对');
+    //     }
+
+
+    // }
+    // class Dog {
+
+    //     constructor(name) {
+    //         this.name = name
+    //     }
+
+    //     sayhello() {
+    //         console.log('汪汪汪汪汪');
+    //     }
+
+    // }
+
+    class ami {
+        constructor(name) {
+            //this代表新建的对象
+            this.name = name
+        }
+        sayhello() {
+            console.log('父类再叫');
+        }
+    }
+    class Person extends ami {
+        //子类中，通过创建同名方法来重写父类的方法
+        sayhello() {
+            console.log('王老五人再叫');
+        }
+    }
+
+    class Dog extends ami {
+        constructor(name,age) {
+           // this.name = name
+            super(name) //重写父类一定要调用父类的构造函数 ,构造函数的第一行代码必须为super 
+           
+            this.age=age
+        }
+        sayhello() {
+            super.sayhello()  //调用父类的方法  
+            console.log('哈士奇');
+        }
+    }
+
+    let person = new Person('王老五')
+    let dog = new Dog('哈士奇','泰迪') 
+    dog.sayhello()
+    console.log(person, dog);
+
+    //主要:继承可以不在修改一个类的情况下对其进行扩展  ocp开闭原则，程序应该对修改关闭，对扩展开放。
+
+
+
+
+</script>
+
+</html>
