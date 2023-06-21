@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    let arr=[1,2,3,4,5,6]
+    let res=arr.indexOf(7)
+
+    let res2=arr.join('~')
+    let res3=arr.slice(1,3) //2，3
+    let res34=arr.slice(1,-2) //2，3，4 后面就是-1，-2，-3 
+    console.log(res);
+    console.log(res2);
+    console.log(res3);
+    console.log(res34);
+    // indexOf
+    //获取元素在数组中第一次出现的索引
+    //参数 1要查询的元素，2查询的位置
+
+    //lastindexof
+    //获取元素在数组中最后一次出现的位置
+    // 返回值  找到则范围元素的索引 
+    //没有则返回-1
+
+    //join
+    //将一个数组中的元素连接为一个字符串
+
+    //slice 非破坏性的
+    //参数：
+    //1.用来截取的起始位置（包含该位置）
+    //2.截取的结束位置（不包含该位置）第二个参数可以省略不写，如果省略则会一直截取到最后，索引可以是负值
+        //如果将两个参数全都省略，则可以对数组进行浅拷贝。
+
+</script>
+</html>

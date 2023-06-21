@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    //尾添push 后删pop 前加unshift 前删shift  splice全功能
+    let arr = ['1', '2', '3', '4', '豆浆', '水果']
+
+
+
+    //splice，可以删除，添加，插入，替换数组  
+    //参数 删除的起始位置 删除的数量
+    let res = arr.splice(-2, 1)
+    console.log(arr, res);
+/*
+    arr.splice(-2, 1) 的意思是从倒数第二个位置开始删除一个元素。
+    
+    在原始数组 arr 中，倒数第二个位置的元素是 '豆浆'，所以这个元素会被删除。
+    
+    最终，arr 数组变为 ['1', '2', '3', '4', '水果']，被删除的元素 '豆浆' 作为数组 res 返回。
+    */
+
+
+</script>
+
+</html>

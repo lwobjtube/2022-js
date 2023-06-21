@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function Preasn(name, age) {
+
+        this.name = name
+        this.age = age
+
+
+    }
+    //向原型中添加方法
+    Preasn.prototype.syahello = () => {
+        console.log(this.name);
+    }
+
+    let resPreasn = new Preasn('老吴', 25)
+
+    console.log(resPreasn);
+
+    //静态属性
+    Preasn.staticMethod = '***'
+
+    //静态方法  
+    Preasn.staticProperty = function () { }
+
+console.log('------------');
+
+    //旧类继承
+    //父
+
+    function Animal(name) {
+        this.name = name
+    }
+
+    Animal.prototype.sayName = function () {
+        console.log('父类原型方法',this.name);
+    }
+
+    //子
+
+    function Dog(name, breed) {
+        // this.name=name
+        Animal.call(this,name)//调用父的构造函数设置子类的属性
+        this.breed = breed
+    }
+    //子继承父类的原型
+    Dog.prototype = Object.create(Animal.prototype)
+
+    Dog.prototype.bark = function () {
+        console.log('子类的方法','11');
+    }
+
+
+    const dog = new Dog('老吴', '牛逼')
+
+    dog.sayName()
+    dog.bark()
+
+    //举例object.create 
+//Object.create() 是 JavaScript 中的一个方法，用于创建一个新对象，并将新对象的原型设置为指定的对象。
+
+
+const Parent={
+    greent(){
+        console.log('我是pa发发');
+    }
+}
+
+const reb=Object.create(Parent)
+
+reb.greent()
+
+/**
+ * 在上述示例中，child 对象通过 Object.create(parent) 创建，
+ * 并继承了 parent 对象的 greet 方法。因此，可以在 child 对象上调用 greet 方法并输出 "Hello"。
+通过 Object.create() 方法，我们可以在 JavaScript 中实现对象之间的原型链关系，实现对象的继承。
+ **/
+
+</script>
+
+</html>

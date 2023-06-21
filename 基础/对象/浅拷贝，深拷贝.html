@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+/*
+浅拷贝 通常对对象拷贝是浅拷贝 浅拷贝只对对象浅层进行复制（只复制一层
+如果对象中存储的数据是原始值，那么拷贝的深浅是不重要的
+浅拷贝只会对对象本身进行复制，不会复制对象中的属性或者元素
+
+
+深拷贝
+深拷贝指不仅复制对象本身，还复制对象中的属性和元素，因为性能问题，通常情况不太使用深拷贝。 
+
+
+
+
+
+
+
+*/
+const a=[{name:'拉欧'},{name:'火辣辣'}]
+
+
+const cl=a.slice()
+a[0]=[{name:'啊啊啊'}]
+
+
+const arr3=structuredClone(a) //专门深拷贝的方法
+console.log(a,cl);
+//structuredClone 方法是浏览器内置的方法,它不是 JavaScript 标准的全局函数 兼容性
+
+
+ 
+//展开运算符
+
+const bb=[1,2,3]
+const cc=[...bb]
+console.log(cc,bb);
+console.log(cc[0]===bb[0]);
+
+//浅拷贝对象
+
+let obj1={name:'john',age:30}
+
+let obj2={...obj1};
+obj1.name='老吴'
+console.log(obj1,obj2);
+
+
+//数组展开
+const arr1=[1,2,3]
+const arr2=[...arr1,4,5]
+console.log(arr2);
+//对象展开
+const obj11={name:'j',age:30}
+
+const obj22={...obj11,city:"new york"}
+
+console.log(obj22);
+
+//函数传参
+const numbers=[1,2,3]
+
+console.log(Math.max(...numbers));
+
+//合并数组
+
+const q1=[1,2,3]
+const q2=[4,5,6,'老吴']
+
+const mergedarray=[...q1,...q2]
+console.log(mergedarray);
+
+
+//对象复制 
+
+const ojbc={name:'老吴',age:24}
+
+//const ojbc2=Object.assign({},ojbc)
+const ojbc2={address:'山',age:29}
+Object.assign(ojbc2,ojbc)
+
+//覆盖了name和age
+console.log(ojbc2);
+
+//展开运算符浅复制
+const objj={...ojbc}
+ojbc.name='www'
+console.log(objj,ojbc);
+</script>
+</html> 

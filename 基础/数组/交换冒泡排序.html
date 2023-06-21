@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+
+<script>
+
+    let arr = [1, 2, 12, 4, 21, 6, 7, 0, 43, 23, 67, 20]
+
+
+    for (let j = 0; j < arr.length; j++) {
+        for (let i = 0; i < arr.length - 1 - j; i++) {
+            //arr[i]前面的数   arr[i+1]后面的数
+            if (arr[i] > arr[i + 1]) {
+                //大数在前，小数在后，需要交换两个元素的位置
+                let itemp = arr[i]
+                arr[i] = arr[i + 1]
+                arr[i + 1] = itemp
+            }
+
+
+        }
+
+
+    }
+    console.log(arr);
+
+    /*
+    代码中的外层循环 for (let i = 0; i < arr.length; i++) 控制了比较和交换的轮数，从第一个元素开始，每轮循环将找到当前未排序部分中的最大元素，并将其移动到正确的位置。
+    
+    内层循环 for (let j = 0; j < arr.length-1-i; j++) 遍历了当前未排序部分中的相邻元素，比较它们的大小并进行交换。
+    
+    如果 arr[j] 大于 arr[j+1]，则执行以下交换操作：
+    */
+
+
+</script>
+
+</html>
