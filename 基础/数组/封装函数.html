@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    let arr = [1, 2, 55, 4, 77, 66, 199, 67]
+    function sort(array) {
+        const arr = [...array]
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    //交换两个元素 （选择排序）
+                    let temp = arr[i]
+                    arr[i] = arr[j]
+                    arr[j] = temp
+                }
+
+            }
+
+        }
+        return arr
+
+
+    }
+    let res = sort(arr)
+    console.log(res);
+
+console.log('-----------------------------------');
+
+    class Person {
+        constructor(name, age) {
+            this.name = name
+            this.age = age
+        }
+    }
+    const Personarr = [
+        new Person('LAOWU', 20),
+        new Person('LAOWU2', 22),
+        new Person('LAOWU', 22)
+    ]
+    function flier(arr) {
+            const newArr=[]
+            for(let i=0;i<arr.length;i++){
+                if(arr[i].age>20){
+                    newArr.push(arr[i])
+                }
+            }
+            return newArr
+    }
+   let ress= flier(Personarr)
+
+   console.log(ress);
+
+   //一个函数的参数也可以是函数，
+   //如果函数作为参数进行传递，那么我们就称这个函数作为回调函数（callback）
+</script>
+
+</html>

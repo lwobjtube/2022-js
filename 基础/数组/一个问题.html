@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+
+
+
+    class Person {
+        constructor(name, age) {
+            this.name = name
+            this.age = age
+        }
+    }
+    const Personarr = [
+        new Person('LAOWU', 20),
+        new Person('LAOWU2', 22),
+        new Person('LAOWU', 22)
+    ]
+    function flier(arr,cb) {
+        const newArr = []
+        for (let i = 0; i < arr.length; i++) {
+            if (cb(arr[i])) {
+                newArr.push(arr[i])
+            }
+        }
+        return newArr
+    }
+
+    // function fn(a){
+    //         return a.age>20
+    // }
+    //会写成匿名函数a=>a.age>20)
+    let ress = flier(Personarr,a=>a.age>20)
+
+    console.log(ress);
+
+
+  
+
+
+
+
+
+</script>
+
+</html>
