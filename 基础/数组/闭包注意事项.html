@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function outer() {
+
+        let someBaraible = 'someValue'
+
+
+        function inner() {
+            console.log(someBaraible);
+        }
+        return inner
+    }
+    //闭包的生命周期
+    /*
+    1.闭包在外部函数调用时产生，外部函数每次调用都会产生一个全新的闭包
+    2.在内部函数丢失时销毁（内部函数被垃圾回收了，闭包也会消失）
+
+    闭包的注意事项
+    当我们需要隐藏不被别人所访问的内容时，意味着需要占用一定的内存空间
+    */
+    function outer() {
+        let num = 0
+        return () => {
+            num++
+            console.log(num);
+        }
+
+    }
+    let res1 = outer()//独立闭包
+    let res2 = outer()
+    res1(), res2(), res2()
+
+    res1 = null
+
+
+
+</script>
+
+</html>
