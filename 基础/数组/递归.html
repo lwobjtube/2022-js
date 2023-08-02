@@ -1,26 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
-    
+
 </body>
 <script>
-//递归，调用自身函数为递归函数
+  //递归，调用自身函数为递归函数
 
-//递归的作用和循环基本一致
+  //递归的作用和循环基本一致
 
-function fn(){
-    fn()
-}
+  function fn(num) {
+    //创建一个变量记录结果
+    let reslut = 1
+    for (let i = 2; i <= num; i++) {
+      reslut *= i
+    }
+    return reslut
+  }
 
-fn()
+  let res = fn(5)
+  console.log(res);
 
 
+
+  //写一个递归，
+  //基线条件 递归的终止条件 
+  //递归条件 如何对问题进行拆分
+  // 递归的作用和循环一致，不同点递归思路比较清晰，但循环执行性能比较和
+  //开发中，循环能解决的尽量使用循环，少用递归 （就是性能问题）
+  function dg(num) {
+    //基线条件
+    if (num === 0) {
+      return 1
+    }
+    //递归条件
+    return dg(num - 1) * num
+  }
+
+
+  let resss = dg(3)
+  console.log(resss);
 
 </script>
+
 </html>

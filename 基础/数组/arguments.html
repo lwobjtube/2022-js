@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+
+    function showargs() {
+        //通过arguments可以不受数量的限制更加灵活的创建
+        let res = 0
+
+        for (let num of arguments) {
+            res += num
+        }
+
+        return res
+    }
+
+    let rr = showargs(1, 2, 3, 4)
+    console.log(rr);
+
+    /*
+    可变参数 在定义函数时将参数指定为可变参数
+    可变参数可以接收任意数量实参，并将他们统一储存到一个数组中返回 
+    可变参数的作用和argument基本一致，但是也具有一些不同点
+    1.可变参数的名字可以自己指定
+    2.可变参数就是一个数组，可以直接使用数组的方法
+    */
+    let arr = [1, 2, 3, 4, 5]
+    for (let i in arr) {
+        console.log(i);
+    }
+
+    function sum2(...sum) {
+        return sum.reduce((a, b) => a + b, 0)
+
+
+    }
+
+    let res=sum2(1, 2, 3)
+    console.log(res);
+</script>
+
+</html>

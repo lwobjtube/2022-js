@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //一堆兔子出生后两个月后每个月都能生一对兔子
+    //计算第N个月兔子的数量
+
+    //求斐波那契数列的第n个数
+
+    function fib(n) {
+
+        //基线条件
+        if (n < 3) {
+            return 1  //第一个月和第二个月都是一对兔子
+        }
+        //递归条件
+
+        return fib(n - 1) + fib(n - 2)
+    }
+
+    let resaa = fib(12)
+    console.log(resaa);
+
+    /* 请注意，虽然递归是一种简单的方法，但它在N较大时会导致性能问题。
+    因为递归的过程中会多次重复计算相同的子问题，增加了计算的时间复杂度。
+    对于较大的N值，推荐使用迭代循环的方式来计算斐波那契数列。
+    fib(n) 表示第n个月的兔子数量，而 fib(n-1) 表示第n-1个月的兔子数量
+    
+    */
+
+
+    function xhmh(n) {
+        //基线条件
+
+        if (n < 3) {
+            return 1 //都是一对兔子
+        }
+        let abits = 1;//n-2波兔子
+        let bbits = 1;//n-1波兔子
+
+        for (let i = 3; i <= n; i++) {
+        let newctz = abits + bbits    //第n个兔子的新增量  1+1
+        abits = bbits //更新n-2兔子  1=》1
+        bbits=newctz//更新n-1兔子  2
+
+
+
+
+
+    }
+    return bbits //n-1波兔子返回第N个月兔子的数量
+    }
+
+    
+
+
+
+    let req = xhmh(6)
+    console.log(req,'2');
+
+</script>
+
+</html>
