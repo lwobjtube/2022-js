@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+
+<script>
+/*Set
+用来创建一个集合  功能数组相似  不同在于Set不能存储重复的数据
+
+
+*/
+
+let age=new Set()
+
+age.add('老吴')
+age.add('wqe')
+for(let q of age){
+    console.log(q);
+}
+
+let a=[...age]
+console.log(a);
+console.log(age);
+
+let w=[1,2,11,1,2,3,3]
+let ww=new Set([...w])
+console.log(ww);
+//set本质和map一样  什么时候需要set 数据不需要重复的时候  ，map 存key value  set存唯一值
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

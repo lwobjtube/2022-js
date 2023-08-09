@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+
+/*
+
+
+map和object主要区别
+object属性名 只能字符或符号，如果传递了一个其他类型的属性名，js解释器会自动转换为字符串
+
+Map任何类型的值都可以称为数据的key
+*/
+let Q={}
+let age=new Map()
+age.set('name','哈哈哈')  //添加
+age.set(Q,'我是Q')
+
+
+console.log(age);
+console.log(age.get('name'));
+ console.log(age.get(Q));
+
+
+ //.size 获取map键值对的数量  .set添加  .get 读取根据key获取值   .delete 删除指定数据  has检查map中是否包含指定键值对  clear删除全都
+
+
+</script>
+</html>

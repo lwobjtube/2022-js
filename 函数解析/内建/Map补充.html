@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+let age=new Map()
+
+age.set("age1","老吴")
+age.set('age',22)
+
+console.log(age);
+//const arr=Array.from(age)  //转换成数组  //[["name",'老吴']，["age",'22']]
+let arrr=[...age]
+
+console.log(arrr);
+
+//遍历map
+
+for(const entry of age){
+    const [key,value]=entry
+    console.log(key,value);
+}
+
+age.forEach((value,key)=>{
+        console.log(key,value);
+})
+/*
+map.keys map.value 所有的keys 所有的value
+
+
+*/
+
+for(const entry of age.keys()){
+  
+    console.log(entry);
+}
+
+</script>  
+</html>

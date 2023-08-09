@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    let person = { name: "张三", age: 23, gender: true };
+    let persons = [
+        { name: "张三", age: 23, gender: true },
+        { name: "李四", age: 24, gender: true },
+        { name: "王五", age: 25, gender: false },
+    ];
+
+    // for(let i of Object.key(person)){
+
+    //     //使用for in 循环遍历对象的属性
+    // //         for(let q in i){
+    // //             console.log(q);
+    // //         }
+    // console.log(person[i]);
+    // }
+
+for(let i of Object.keys(person)){
+    console.log(i
+    );
+}
+
+</script>
+
+</html>
