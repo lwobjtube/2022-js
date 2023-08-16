@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <button id="btn">点我</button>
+
+        <iframe src="https://www.lilichao.com" frameborder="0"></iframe>
+</body>
+
+<script>
+
+/*
+加载文档自上向下
+解决问题  
+1将script标签写在body最后
+2编写到window.onload中回调函数
+3编写到document对象的DOMContentLoaded的回调函数中(执行时机更早@@@@@@@@@@@@)  不能以点的方式去调用只能在事件绑定函数中使用
+编写在外部的js 以为defer引入  （早，早于DOMContentLoaded
+*/
+
+// window.onload=()=>{
+//     let btn=document.getElementById('btn') 
+//     alert('1111') 
+// }
+window.addEventListener('DOMContentLoaded',()=>{   //load
+    let btn=document.getElementById('btn')
+    alert('1111')
+})
+
+
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box"><span>哈哈哈</span>
+    </div>
+</body>
+
+<script>
+
+    /*
+    请根据您的需求选择使用 textContent 或 innerText。如果您只关心元素内的纯文本内容，
+    通常使用 textContent 更合适，因为它不会受到样式的影响。
+    如果您希望获取视觉上的文本内容，可能会更倾向于使用 innerText。
+
+innerHTML xss注入风险  innerText会考虑css样式  textcontent不考虑
+    
+    */
+
+    let age = document.getElementById('box')
+    console.log(age.innerText)
+</script>
+
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //手机号  \d是匹配任意数字 所以1是数字 3-9随意一个   \d是匹配任意数字 
+        let res = /1[3-9]\d{9}/g; // 匹配手机号码的正则表达式
+        res = /(1[3-9]\d)\d{4}(\d{4})/g  //// 匹配手机号码并分组捕获前四位和后四位
+
+        let Text = "qwert18216445468eweawbfgfg18072364589kgjfjgfh18975463659";
+        let reslut
+        while ((reslut = res.exec(Text))) {
+            console.log(reslut[1] + "****" + reslut[2]);  // 输出部分隐藏处理后的手机号码
+        }
+
+
+//exec返回：数组， 查找并返回当前的匹配结果，并以数组的形式返回；如果不存在模式，则 arr 为 null，否则 arr 总是一个长度为 1 的数组，其值就是当前匹配项。
+
+
+
+
+
+    </script>
+</body>
+
+</html>

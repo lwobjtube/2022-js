@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btin">爱你</button>
+
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+</body>
+
+<script>
+    document.getElementById('btin').onclick = () => {
+        alert('111')
+    }
+
+    let sp = document.getElementsByTagName('span')
+    for (let i = 0; i < sp.length; i++) {
+        sp[i].style.color = 'red'
+    }
+
+    console.log(sp);
+   // document.getElementsByTagName//根据标签名获取元素  实时更新列表
+    // document.getElementsByName()  //根据name获取元素  实时更新列表
+    //document.querySelectorAll据选择器获取一组
+    //document.querySelector  根据选择器获取查找符合的第一个
+</script>
+
+</html>

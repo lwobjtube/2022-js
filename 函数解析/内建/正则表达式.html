@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    reg = /a/i
+    let str = 'abcde'
+
+    let res = reg.test(str)  //测试true
+    let res1 = reg.test('f')
+    console.log(res1);
+
+    /*
+     | 或   []或字符集  [a-z] a到z   [^]表示除了 [^x]除了x  .表示除了换行外的任意符
+     在正则\作为转义符
+    re=/[^a-z]  //匹配包含小写字母以外内容的字符串
+    
+    开头和结尾 ^开  $结尾
+    
+    re=/^a$/  只匹配字母a 完全匹配 要求字符串必须和正则完全一致  （以这个a开始以这个a结尾）  re.rest('aa')是不成立的
+    */
+    let re = /[^abc]/
+
+    let resA = re.test('d')
+    console.log(resA);
+
+    /*
+    量词
+    {m} 正好m个
+    {m,}至少m一个
+    
+    
+    
+    
+    
+    
+    
+    */
+    let res4 = /^a{3}$/
+    //re=/^(ab){3}$/ ab出现3次
+    // /[a-z]{3} 出现3次 任意字符  abbbb 不行
+
+    let result = res4.test('aaaa')
+    console.log(result);
+
+    /*
+    re.exec()
+    
+    */
+    let strr = "abcaccafc"
+
+    let ree = /a(([a-z])c)/ig
+
+    let resu = ree.exec(str)
+
+
+    while (resu) {
+        console.log(resu[0],resu[1],resu[2]);
+        resu=ree.exec(strr)
+    }
+
+</script>
+
+</html>

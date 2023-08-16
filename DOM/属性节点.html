@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="老吴" value="admin" class="aaa">
+</body>
+
+<script>
+
+    let input = document.getElementsByName('老吴')[0]
+    let input2 = document.querySelector("[name=老吴]")
+    console.log(input, input2);
+    console.log(input.type);
+    console.log(input.className);
+    //console.log(input.getAttribute("type"));
+
+    input.setAttribute('disabled', 'false')  //禁用输入框
+    input.removeAttribute('disabled')  //移除
+
+</script>
+
+</html>
